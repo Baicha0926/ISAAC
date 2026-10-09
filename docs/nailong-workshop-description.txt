@@ -1,0 +1,41 @@
+[h1]奶龙替换以撒[/h1]
+A fan-made yellow NaiLong / Milk Frog-inspired skin for normal Isaac in The Binding of Isaac: Repentance+.
+
+[h2]Appearance[/h2]
+[list]
+[*]A small smile at rest, a wide laugh while shooting, and four-direction walking with visible footsteps.
+[*]Optional movement-facing lets the head follow movement when you are not shooting. Breathing and blinking idle animations settle after you stop.
+[*]Technology eyes, Brimstone horns and homing heart eyes can combine. Brimstone, Tech X and Chocolate Milk have charging expressions.
+[*]Decorative wings follow native flight. The body uses a separate flying costume even when decorative wings are disabled.
+[*]After completing a Boss fight, NaiLong holds his belly and laughs with audio. Multi-boss fights wait for the room to finish; Boss Rush celebrates after the final wave.
+[*]The celebration lasts up to five seconds and yields to damage, item holding, room changes and special actions. Returning to a completed Boss room does not repeat it.
+[/list]
+
+[h2]Changes in 1.4.5[/h2]
+[list]
+[*]Use the native Sprite pointer hash instead of comparing Lua wrapper objects. Stable walking and shooting no longer repeatedly remove/re-add the head and body costumes, which resets their independent animation clocks. Actual native sprite replacement still triggers recovery.
+[*]Track the weapon appearances hidden by this skin and restore still-owned item/effect costumes when Isaac changes to another character or a co-op ghost. Removed items are not restored.
+[*]Queue Boss celebration while controls are locked or cooling down. Start after control returns; interrupt an active laugh if controls are locked again.
+[*]Added an independent movement-facing switch, enabled by default. Disabling it preserves native aiming while idle breathing remains separately configurable.
+[*]Added Reset preferences in Mod Config Menu. It restores this skin's settings and saves them without changing items or character stats.
+[*]Preserved all 1.4.3 sprite, animation and audio assets unchanged.
+[/list]
+
+[h2]Changes in 1.4.3[/h2]
+[list]
+[*]Added dedicated ground/flying body selection to address missing bodies after gaining flight. Temporary flight ending restores the ground costume.
+[*]Repacked both belly-laugh phases in all four directions and paired the base celebration head with its body phase.
+[*]Corrected mismatched left/right shooting profiles and kept the back-facing head consistent between firing frames.
+[*]Rebuilt the walking cycle with a stable torso and three leg poses. Unchanged walking or shooting no longer reloads textures every frame.
+[*]Preserved native pose, scale and playback during appearance refreshes; retained item expressions, idle animation and laugh preferences.
+[/list]
+
+[h2]Use and settings[/h2]
+Enable one copy of this mod, fully restart the game after updating, and select normal Isaac.
+Optional Mod Config Menu: category [b]NaiLong[/b]. Toggle movement-facing, weapon faces, homing eyes, wings, idle animation, charging faces, Boss laughter and laugh audio. Reset preferences is under Settings. Adjust laugh volume and duration (0.5-5 seconds).
+
+[h2]Scope[/h2]
+This is a cosmetic skin. It does not change health, stats, item abilities, inventory, attacks, controls, hitboxes or the HUD. Other characters keep their native appearance. Mega Mush and incompatible full-body sprite layouts temporarily use their native visuals. Other mods replacing the same player head/body may conflict.
+Visual and Lua regression checks for this update were performed offline; native in-game flying and celebration rendering has not yet been confirmed.
+
+Unofficial fan project; not affiliated with the original character creators. See AUDIO-NOTICE.txt for the audio source selected by the user.

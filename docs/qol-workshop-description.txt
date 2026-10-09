@@ -1,0 +1,46 @@
+[h1]懒人整合包（自用）[/h1]
+A configurable convenience pack for The Binding of Isaac: Repentance+.
+[b]Version 1.9.0[/b] focuses on less running and fewer repetitive actions. All 14 features have independent persistent switches.
+
+[h2]One-click lazy mode[/h2]
+Press L in a compatible Mod Config Menu, open 懒人整合包（自用） -> 懒人预设 -> 一键启用懒人模式.
+This enables whole-room resource attraction, ordinary/gold chest opening, purchase protection, faster cleanup, floor reminders, mirror protection and map-key pause. At least two keys are reserved; a higher custom reserve is retained. Blacklists, optional hearts, rewind choices, pills/highlights, nearby ranges and text layout are preserved.
+Light assistance uses nearby resources and ordinary chests, disabling whole-room automation and gold-chest spending. The first pre-preset custom configuration is backed up across restarts and can be restored with one action. Repeated preset changes keep that original backup until restored.
+
+[h2]Resource collection and chest opening[/h2]
+[list]
+[*][b]Clear-room attraction:[/b] Free coins, ordinary bombs and ordinary/double/charged keys move toward the nearest eligible local player after safe clearance. Nearby range defaults to 120 (40-200); optional whole-room mode removes the distance limit within the current room. Native collision collects the drops; players are never moved and inventory is never directly granted.
+[*][b]Category blacklist:[/b] Coins, bombs, keys and hearts are separately configurable. Hearts default OFF. Optional allowed red/soul/black/bone/rotten hearts require native capacity. Paid/shop/choice/timed/fresh/waiting pickups are excluded, as are pedestals, pills, cards, trinkets, batteries, sacks, chests, golden resources, sticky nickels, special bombs, eternal/golden/scared/blended hearts and unknown subtypes.
+[*][b]Smart ordinary chests:[/b] Free brown chests open through the native TryOpenChest(player) API. Nearby range defaults to 80 (40-160); optional whole-room mode handles unobstructed chests anywhere in this room. Native loot can contain dangerous drops. Successful requests are latched; failed requests retry at most every 15 frames.
+[*][b]Independent smart gold chests:[/b] Standard gold chests open only when keys exceed the reserve (default 2, adjustable 0-10). A successful paid request consumes one key: native debits are respected, otherwise one key is deducted. Golden-key or Paper Clip players open for free and take priority over paying teammates. Pay to Play payment rules remain manual. The reserve governs this pack's automated requests.
+[*][b]Map-key pause:[/b] Hold the native map action to pause this pack's attraction and automatic opening for the whole local party. Release to resume; manual pickup/input remains available.
+[/list]
+Automation requires a clear room with no living enemies or active ambush, an eligible player and an unobstructed straight path; it does not cross pits or walls. Combat resuming, pausing, menus, room changes and disabling a category stop attraction. Tainted Cain disables attraction/opening for the whole party. Dead, ghost, control-locked or pickup-ineligible players are skipped.
+Chest opening additionally excludes challenge rooms, shop/paid/choice/timed/fresh/waiting chests, and stone, spiked, mimic, haunted, eternal, mega, wooden, red and unknown chest variants.
+
+[h2]Other conveniences[/h2]
+[list]
+[*][b]Contact purchase guard:[/b] Keep touching a paid pickup for at least 0.3 seconds before native purchasing. Each purchase has its own interval; leaving or pausing resets it. No confirmation key. Native costs, discounts, affordability and choices are preserved.
+[*][b]Faster cleanup:[/b] Safe clearance allows ordinary poop and ordinary fireplaces to break in one hit. You still attack; special variants keep normal behavior.
+[*][b]Pill identification:[/b] Identifies ordinary/horse pills without changing effects; golden pills stay random. Disabling cannot undo this run's acquired pill knowledge. External Item Descriptions is optional.
+[*][b]Secret-door highlights:[/b] Marks actual Secret, Super Secret and directly adjacent Ultra Secret entrances until opened. Native bombs/keys are still required; no guessed routes or crawlspace markers.
+[*][b]Leave-floor reminders:[/b] Near trapdoors/heaven beams, shows free pedestals, unopened chests and supplies in rooms observed while enabled. Continuing the same run retains records; new floors/toggling reset them. No unvisited-room spoilers, forced exit confirmation or crawlspace alerts.
+[*][b]Mirror protection:[/b] Repairs the native Mirror World entrance's broken flag, state, lock and animation. No room reload or teleport. Other doors are untouched.
+[/list]
+
+[h2]Optional rewind assistance[/h2]
+Both independent rewind switches default OFF. Use only one automatic rewind provider.
+[list]
+[*][b]Manual:[/b] Default Shift+G; select G/F6/F7/F9 and an optional Shift requirement. Held inputs do not repeat; menu/pause inputs are ignored.
+[*][b]Death:[/b] After the final non-ghost local player dies, a 3-second countdown (1-10 configurable) requests native rewind. F8 cancels this death only. Extra lives, surviving teammates and revival take priority. Opening MCM clears the timer; closing restarts it. One automatic attempt per death, including errors. Real elapsed render time works on paused death screens; suspend/focus gaps do not skip unseen countdowns.
+[*][b]Scope:[/b] Available after entering another room in this play session on the same floor. New/continued runs and new floors clear readiness. Challenge, Greed, Home, off-grid and missing/same-room checkpoints are excluded. Uses Isaac.ExecuteCommand("rewind") to restore the native previous-room checkpoint, not multi-slot saves. Other mods' custom state is not restored.
+[/list]
+
+[h2]Settings and compatibility[/h2]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2494192799]Mod Config Menu Chinese[/url] or compatible MCM provides settings; core functions need no companion. L -> 懒人整合包（自用）: 独立开关 has 14 switches, 拾取黑名单 has categories, 自动拾取 has nearby range, 智能开箱 has nearby range/key reserve, 回溯辅助 has keys/delay, 懒人预设 has apply/restore buttons. Purchase delay and HUD layout remain adjustable.
+The nine existing non-rewind features and coins/bombs/keys default ON; hearts, rewind and the three new whole-room/gold switches default OFF. Existing preferences are preserved; explicitly applying lazy mode enables new automation.
+Fully exit and restart after updating; enable only one copy. Standard Repentance+ Lua API without REPENTOGON; single-player/local co-op intended, official online co-op unsupported. Avoid overlapping secret-door markers. Four-choice/two-pick starting items and NaiLong remain separate mods.
+Independent implementations inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3714313854]Skill Issues / Remembrall[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2932089585]Faster Golden Penny[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2778554991]Unbreakable Mirror[/url]. No third-party mod assets are bundled.
+
+[h2]Validation[/h2]
+4,489 offline Lua assertions passed using the game's runtime, installed Repentance+ enums and simulated engine objects. Live gameplay has not been tested. Native gold payment, rewind/death transitions and mirror repair still require in-game verification.

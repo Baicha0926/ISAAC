@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<costumes anm2root="gfx/baicha_nailong/">
+  <costume anm2path="milkfrog_wings.anm2" type="none" priority="980" />
+  <costume anm2path="milkfrog_head.anm2" type="none" priority="999" />
+  <costume anm2path="milkfrog_body.anm2" type="none" priority="999" />
+  <costume anm2path="milkfrog_body_flying.anm2" type="none" priority="999" isFlying="true" />
+</costumes>

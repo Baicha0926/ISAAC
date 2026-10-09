@@ -1,0 +1,1 @@
+1.4.5: stable native Sprite pointer identity prevents repeated costume animation resets; native costume cleanup on character/ghost changes; control-aware Boss laughter; independent movement-facing toggle and resettable preferences. Existing art and audio retained. Offline checks only; in-game verification deferred.

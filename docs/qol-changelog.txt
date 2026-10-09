@@ -1,0 +1,1 @@
+1.9.0: Added optional whole-room resources/chests, independent smart gold chests and configurable key reserve, plus lazy/light presets and a persistent custom-configuration restore backup. Blacklist, hearts, rewind and display choices are retained. 4,489 simulated Lua assertions passed. Offline regression checks only; live in-game verification remains pending.

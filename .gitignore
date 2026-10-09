@@ -1,0 +1,14 @@
+# Local game data and generated artifacts
+save*.dat
+save*.json
+disable.it
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+__pycache__/
+work/
+outputs/
+.env
+.env.*

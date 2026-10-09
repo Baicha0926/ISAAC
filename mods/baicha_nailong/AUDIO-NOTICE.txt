@@ -1,0 +1,8 @@
+User-selected laugh audio
+Source: https://www.bilibili.com/video/BV1auFZzaE4W/
+Video title: 奶龙捧腹大笑原版
+Segment: 00:00.000-00:05.000
+Original audio track SHA256: 0f3eb08b5c87122f37d266677b3306976b8dda5ab10192297fce5bbcf06cbe78
+
+Only the selected first five seconds are included, with duration-matched prefixes, mono PCM16 conversion, peak normalization and short edge fades. No speed/pitch changes or repeated audio were used.
+This is a personal fan mod. No affiliation or official endorsement is claimed. Version 1.4.5 is published on Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3813312055

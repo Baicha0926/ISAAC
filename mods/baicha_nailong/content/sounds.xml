@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sounds root="sounds/baicha_nailong/">
+  <sound name="BaichaNaiLongBellyLaugh_15">
+    <sample weight="1" path="laugh_15.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_30">
+    <sample weight="1" path="laugh_30.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_45">
+    <sample weight="1" path="laugh_45.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_60">
+    <sample weight="1" path="laugh_60.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_75">
+    <sample weight="1" path="laugh_75.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_90">
+    <sample weight="1" path="laugh_90.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_105">
+    <sample weight="1" path="laugh_105.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_120">
+    <sample weight="1" path="laugh_120.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_135">
+    <sample weight="1" path="laugh_135.wav" />
+  </sound>
+  <sound name="BaichaNaiLongBellyLaugh_150">
+    <sample weight="1" path="laugh_150.wav" />
+  </sound>
+</sounds>
